@@ -40,7 +40,7 @@ CLAHE(Contrast Limited Adaptive Histogram Equalization) 전처리와 HoughCircle
 
 ## PID 제어
 
-오차(공 중심 - 화면 중심)에 비례하는 P 제어만 사용했고(I, D는 0), 서보가 급격히 움직여 오버슈트하지 않도록 한 스텝당 duty cycle 변화폭을 ±0.2로 제한했습니다. 서보의 물리적 가동 범위를 보호하기 위해 X축은 3~12, Y축은 7~12 범위로 duty cycle을 클램핑했습니다.
+오차(공 중심 - 화면 중심)에 비례하는 P 제어만 사용했고(I, D는 0), 서보가 급격히 움직여 오버슈트하지 않도록 한 스텝당 duty cycle 변화폭을 ±0.2로 제한했습니다. 서보의 물리적 가동 범위를 보호하기 위해 X축은 `3~12`, Y축은 `7~12` 범위로 duty cycle을 클램핑했습니다.
 
 ```python
 def calculate_pid(error, integral, differential, prev_error, P, I, D):
