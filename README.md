@@ -9,7 +9,7 @@
 
 ## 하드웨어 구성
 
-![하드웨어 구성](assets/01_hardware.png)
+<img src="assets/01_hardware.png" width="450">
 
 라즈베리파이 + 카메라 모듈 + 팬틸트 서보 모터 2개(GPIO 17: Pan, GPIO 27: Tilt)로 구성했습니다.
 
@@ -32,13 +32,11 @@ Camera → 전처리(Blur, Grayscale, CLAHE) → HoughCircles 원 검출
 
 CLAHE(Contrast Limited Adaptive Histogram Equalization)로 명암 대비를 보정해 조명이 고르지 않은 환경에서도 원 검출이 안정적으로 되도록 했습니다.
 
-## 검출 성능 개선
+## 원 검출 (Circle Detection)
 
-중간 점검 시점에는 검출된 원이 실제 공보다 크고 헐겁게 잡혀 추적이 부정확했습니다. CLAHE 전처리를 추가하고 HoughCircles 파라미터를 재조정해 원이 공 형태에 훨씬 정확하게 맞도록 개선했습니다.
+CLAHE(Contrast Limited Adaptive Histogram Equalization) 전처리와 HoughCircles 파라미터 튜닝을 통해, 공 형태에 맞춰 원이 정확하게 검출되는 것을 확인했습니다.
 
-| 중간 점검 시점 | 개선 후 |
-|---|---|
-| ![개선 전](assets/02_detection_before.png) | ![개선 후](assets/03_detection_after.png) |
+<img src="assets/02_detection.png" width="450">
 
 ## PID 제어
 
