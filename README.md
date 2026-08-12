@@ -9,7 +9,7 @@
 
 ## 하드웨어 구성
 
-<img src="assets/01_hardware.png" width="450">
+<img src="assets/01_hardware.png" width="380">
 
 라즈베리파이 + 카메라 모듈 + 팬틸트 서보 모터 2개(GPIO 17: Pan, GPIO 27: Tilt)로 구성했습니다.
 
@@ -36,7 +36,7 @@ CLAHE(Contrast Limited Adaptive Histogram Equalization)로 명암 대비를 보�
 
 CLAHE(Contrast Limited Adaptive Histogram Equalization) 전처리와 HoughCircles 파라미터 튜닝을 통해, 공 형태에 맞춰 원이 정확하게 검출되는 것을 확인했습니다.
 
-<img src="assets/02_detection.png" width="450">
+<img src="assets/02_detection.png" width="380">
 
 ## PID 제어
 
