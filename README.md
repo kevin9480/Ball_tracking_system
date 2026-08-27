@@ -1,11 +1,11 @@
 # Raspberry Pi Ball Tracking System
 
-임베디드 시스템 설계 기말프로젝트 — 카메라로 공을 검출하고, 팬틸트(Pan-Tilt) 서보를 P 제어로 공을 실시간으로 추적하는 시스템입니다.
+임베디드 시스템 설계 기말프로젝트 — 카메라로 공을 검출하고, 팬틸트(Pan-Tilt) 서보를 P제어로 공을 실시간으로 추적하는 시스템입니다.
 
 ## 개요
 
 - 라즈베리파이 카메라로 영상을 받아 OpenCV `HoughCircles`로 공을 검출합니다.
-- 검출된 공의 중심 좌표와 화면 중앙 사이의 오차를 계산해, PID 제어로 팬틸트 서보 모터(X축/Y축)를 움직여 공을 화면 중앙에 유지합니다.
+- 검출된 공의 중심 좌표와 화면 중앙 사이의 오차를 계산해, P제어로 팬틸트 서보 모터(X축/Y축)를 움직여 공을 화면 중앙에 유지합니다.
 
 ## 하드웨어 구성
 
@@ -38,9 +38,9 @@ CLAHE(Contrast Limited Adaptive Histogram Equalization) 전처리와 HoughCircle
 
 <img src="assets/02_detection.png" width="380">
 
-## PID 제어
+## P 제어
 
-오차(공 중심 - 화면 중심)에 비례하는 P 제어만 사용했고(I, D는 0), 서보가 급격히 움직여 오버슈트하지 않도록 한 스텝당 duty cycle 변화폭을 ±0.2로 제한했습니다. 서보의 물리적 가동 범위를 보호하기 위해 X축은 `3~12`, Y축은 `7~12` 범위로 duty cycle을 클램핑했습니다.
+오차(공 중심 - 화면 중심)에 비례하는 P 제어를 사용했고, 서보가 급격히 움직여 오버슈트하지 않도록 한 스텝당 duty cycle 변화폭을 ±0.2로 제한했습니다. 서보의 물리적 가동 범위를 보호하기 위해 X축은 `3~12`, Y축은 `7~12` 범위로 duty cycle을 클램핑했습니다.
 
 ```python
 def calculate_pid(error, integral, differential, prev_error, P, I, D):
