@@ -1,6 +1,6 @@
 # Raspberry Pi Ball Tracking System
 
-임베디드 시스템 설계 기말프로젝트 — Raspberry Pi Camera로 공을 검출하고, Pan-Tilt Servo를 PID 제어해 공을 실시간으로 추적하는 시스템입니다.
+임베디드 시스템 설계 기말프로젝트 — Raspberry Pi와 Camera로 공을 검출하고, Pan-Tilt Servo를 PID 제어해 공을 실시간으로 추적하는 시스템입니다.
 
 ## 개요
 
