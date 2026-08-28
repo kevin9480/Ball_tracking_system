@@ -17,7 +17,7 @@
 
 ```
 Camera → 전처리(Blur, Grayscale, CLAHE) → HoughCircles 원 검출
-       → 중심 오차 계산 → PID 제어 → 서보 duty cycle 조정 → Pan/Tilt 서보 구동
+       → 중심 오차 계산 → P 제어 → 서보 duty cycle 조정 → Pan/Tilt 서보 구동
 ```
 
 | 항목 | 값 |
