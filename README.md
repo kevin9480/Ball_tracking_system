@@ -207,6 +207,3 @@ PID 제어와 출력 제한 로직을 적용해 공의 위치 변화에 따라 S
 
 ---
 
-## Source Code
-
-전체 코드는 [`ball_tracking.py`](ball_tracking.py)를 참고해주세요.
