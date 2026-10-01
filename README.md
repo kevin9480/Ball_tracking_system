@@ -166,9 +166,9 @@ PID Control
     ↓
 Anti-windup
     ↓
-Duty Cycle 변화량 ±0.2 제한
-    ↓
 Deadband ±20 px
+    ↓
+Duty Cycle 변화량 ±0.2 제한
     ↓
 Pan/Tilt Duty Cycle Clamp
     ↓
