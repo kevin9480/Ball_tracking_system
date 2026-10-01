@@ -25,7 +25,7 @@ IMAGE_WIDTH = 320
 IMAGE_HEIGHT = 240
 IS_RASPI_CAMERA = is_raspberry_camera()
 FPS_TARGET = 60
-FRAME_DELAY = 1 / FPS_TARGET  # FPS 30
+FRAME_DELAY = 1 / FPS_TARGET  # FPS 60
 
 # HoughCircles Parameters
 HOUGH_DP = 1.2        # Inverse ratio of accumulator resolution to image resolution
