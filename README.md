@@ -187,7 +187,7 @@ PID 제어와 출력 제한 로직을 적용해 공의 위치 변화에 따라 S
 - X/Y 위치 오차 기반 Pan-Tilt PID 제어
 - Integral Anti-windup 적용
 - Servo 제어 시 Duty Cycle 변화량 최대 ±0.2 제한
-- X축 3~12 / Y축 7~12 Duty Cycle Clamp
+- X축 3-12 / Y축 7-12 Duty Cycle Clamp
 - 화면 중심 기준 ±20 px Deadband 적용
 
 ---
